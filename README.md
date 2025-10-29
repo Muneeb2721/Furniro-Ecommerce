@@ -1,64 +1,62 @@
-<<<<<<< HEAD
-# EcommerceStore
+# 🛋️ Furniro-Ecommerce Shop
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.0.
+Furniro-Ecommerce Shop is a fully responsive e-commerce web application built using **Angular**, styled with **Material UI** and **TailwindCSS** for a clean and modern user experience.  
+This project is a **Figma-to-Code** conversion showcasing pixel-perfect design implementation with smooth navigation and interactive e-commerce features.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Live Demo
 
-```bash
-ng serve
-```
+🔗 **Deployed on Vercel:** [Furniro E-Commerce Shop](#)
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## 🧩 Features
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- 🏠 **Home Page:** Displays featured furniture and product categories.  
+- 🛍️ **Shop Page:** Browse all available products with elegant UI.  
+- 📰 **Blog Section:** Explore articles and posts related to furniture and design.  
+- ℹ️ **About Page:** Provides information about the Furniro brand and its story.  
+- ➕ **Add to Cart:** Add desired products with quantity selection.  
+- ❌ **Remove from Cart:** Remove items dynamically from the cart.  
+- 📱 **Fully Responsive:** Optimized for all screen sizes using **TailwindCSS** and **Material UI** components.  
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🛠️ Tech Stack
 
-```bash
-ng generate --help
-```
+**Frontend Framework:** Angular  
+**UI Libraries:** Material UI, TailwindCSS  
+**Deployment Platform:** Vercel  
+**Design Source:** Figma  
 
-## Building
+---
 
-To build the project run:
+## 🖼️ UI Preview
 
-```bash
-ng build
-```
+![Front Page](./src/assets/preview.png)
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+## 💡 Future Enhancements
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+- 🧾 **User authentication & profile management**  
+- 💳 **Payment gateway integration**  
+- 🛒 **Wishlist feature**  
+- 📦 **Order tracking module**  
+- 🌐 **Admin dashboard for product management**
 
-```bash
-ng test
-```
+---
 
-## Running end-to-end tests
+## 👨‍💻 Author
 
-For end-to-end (e2e) testing, run:
+**Muneeb Nadeem**  
+Frontend Web Developer | Angular • React • Next.js  
+📍 [GitHub Profile](https://github.com/Muneeb2721) 
+🔗 [LinkedIn Profile](https://linkedin.com/in/muneebnadeem)
 
-```bash
-ng e2e
-```
+---
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 📝 License
 
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-=======
-# Furniro-Ecommerce
-Its an Ecommerce Shop Angular project demonstrates the figma to code expertise and frontend responsive skills.
->>>>>>> bd1231caa5f7ba61489be8e84d294e37a6e7c4ff
+This project is open-source and available under the **MIT License**.

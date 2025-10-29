@@ -1,0 +1,49 @@
+<div id="cartssidebar" class="cartsidebar bg-white font-poppins w-fit flex flex-col gap-5">
+    
+    <div class="head flex items-center justify-between gap-25 mx-8 mt-6">
+        <h1 class="text-[24px] font-semibold">Shopping Cart</h1>
+        <fa-icon [icon]="faCross" class=" cursor-pointer " id="cross" (click)="removeCartSidebar()"></fa-icon>
+    </div> 
+
+    <div class="hr bg-[#D9D9D9] border-t-2 border-t-[#9F9F9F] mt-4 mx-8 opacity-[0.3]"></div>
+    
+    <div  *ngFor="let product of cartItems"
+        class="items flex flex-col gap-3 mt-4">
+        <div class="item1 flex justify-around items-center">
+            <div class="image bg-[#D9D9D9] rounded-[8px]">
+                <img [src]="product.imageUrl" class="w-24 h-24 rounded-[8px]">
+            </div>
+            <div class="product-description flex gap-8 items-center">
+                <div class="product-name flex flex-col gap-3.5">
+                    <h3 class="">{{product.title}}</h3>
+                    <p class="">{{product.quantity}} x 
+                        <span class="text-[#B88E2F]">{{product.discountAmount}}</span>
+                    
+                    </p>
+                </div>
+                <fa-icon [icon]="faCircleXmark" class="cursor-pointer" (click)="remove(product.title)"></fa-icon>
+            </div>
+        </div>
+    </div>
+
+    <div 
+        class="amount flex justify-around items-center mt-4">
+        <h3 class="font-bold">Subtotal</h3>
+        <p class="text-[#B88E2F] font-bold">{{ subtotal }}</p>
+    </div>
+    
+    <div class="hr bg-[#D9D9D9] border-t-2 border-t-[#9F9F9F] mt-4 mx opacity-[0.3]"></div>
+    
+    <div class="links flex justify-around items-center mt-4 mb-6 mx-5 gap-3">
+        <div class="rounded-full border-1 px-5 py-1">
+            <a class="cursor-pointer" (click)="redirectToCart()">Cart</a>
+        </div>
+        <div class="rounded-full border-1 px-5 py-1">
+            <a class="cursor-pointer" (click)="redirectToCheckout()">Checkout</a>
+        </div>
+        <div class="rounded-full border-1 px-5 py-1">
+            <a class="cursor-pointer" (click)="redirectToComparison()">Comparison</a>
+        </div>
+    </div>
+
+</div>

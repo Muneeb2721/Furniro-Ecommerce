@@ -1,0 +1,144 @@
+<div class="contact-page font-poppins mb-12">
+    <div class="shop-banner relative flex flex-col h-70 bg-cover bg-center justify-center items-center"
+        style="background-image: url('assets/imgHome/image25.jpg')">
+        <div class="absolute inset-0 bg-white opacity-80 z-10"></div>
+
+        <div class="relative z-20 flex flex-col items-center mb-12">
+            <img src="assets\imgHome\logo.png" alt="Logo" class="w-20 h-20" />
+            <h2 class="text-[45px] text-[#000000]">Contact</h2>
+            <p class="text-[18px] text-[#000000]">
+                <span class="font-semibold"><a class="cursor-pointer" (click)="redirectToHome()"> Home</a> &gt; </span> Contact
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="font-poppins mb-12">
+
+    <div class="w-[50%] mx-auto mb-20 text-center
+    xs1:w-[70%] xs1:space-y-4
+    xs2:w-[70%] xs2:space-y-4
+    sm1:w-[70%] sm1:space-y-4
+    sm2:w-[60%] sm2:space-y-5
+    md1:w-full md1:space-y-5">
+        <h2 class="text-[36px] font-semibold leading
+        xs2:text-[32px]
+        md1:w-[40%] md1:mx-auto
+        md2:w-[55%] md2:mx-auto">Get In Touch With Us</h2>
+        <p class="text-[#9F9F9F]
+        md1:w-[70%] md1:mx-auto
+        md2:w-full md2:mx-auto">
+            For More Information About Our Product & Services. Please Feel Free To Drop Us An
+            Email. Our Staff Always Be There To Help You Out. Do Not Hesitate!
+        </p>
+    </div>
+
+    <div class="flex justify-center
+    xs1:flex-col xs1:items-center
+    xs2:flex-col xs2:items-center
+    sm1:flex-col sm1:items-center">
+
+        <div class="address w-[30%]
+            xs1:w-[80%] xs1:space-y-5
+            sm1:w-[75%] sm1:space-y-5
+            sm2:w-[45%] sm2:space-y-5
+            md1:w-[45%] md1:space-y-5
+            md2:w-[45%] md2:space-y-5">
+
+            <div class="flex gap-3 items-baseline
+                xs1:gap-3 xs1:justify-center    
+                xs2:gap-3 xs2:justify-center
+                sm1:gap-4 sm1:justify-center">
+                <fa-icon [icon]="faAddress" class="text-[28px]"></fa-icon>
+                <div class="w-[50%] space-y-3
+                xs1:w-[60%]
+                xs2:w-[60%]
+                sm1:w-[60%]">
+                    <h5 class="text-[20px] font-bold">Address</h5>
+                    <p class="">236 5th SE Avenue, New York NY10000, United States</p>
+                </div>
+            </div>
+
+            <div class="flex gap-3 items-baseline
+                xs1:gap-3 xs1:justify-center    
+                xs2:gap-3 xs2:justify-center
+                sm1:gap-4 sm1:justify-center">
+                <fa-icon [icon]="faCall" class="text-[28px]"></fa-icon>
+                <div class=" space-y-3
+                xs1:w-[60%]
+                xs2:w-[60%]
+                sm1:w-[60%]">
+                    <h5 class="text-[20px] font-bold">Phone</h5>
+                    <div class="">
+                        <p class="">Mobile: +(84) 546-6789</p>
+                        <p class="">Hotline: +(84) 456-6789</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-3 items-baseline
+                xs1:gap-3 xs1:justify-center    
+                xs2:gap-3 xs2:justify-center
+                sm1:gap-4 sm1:justify-center">
+                <fa-icon [icon]="faTime" class="text-[28px]"></fa-icon>
+                <div class=" space-y-3
+                xs1:w-[60%]
+                xs2:w-[60%]
+                sm1:w-[60%]">
+                    <h5 class="text-[20px] font-bold">Working Time</h5>
+                    <div class="">
+                        <p class="">Monday-Friday: 9:00 - 22:00</p>
+                        <p class="">Saturday-Sunday: 9:00 - 21:00</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="form w-[30%]
+        xs1:w-[60%] xs1:mt-8
+        xs2:w-[60%] xs2:mt-8
+        sm1:w-[50%] sm1:mt-8
+        sm2:w-[40%]
+        md1:w-[40%]
+        md2:w-[40%]">
+
+            <form class="space-y-8
+            ">
+
+                <div class="input-1 flex flex-col space-y-3">
+                    <label for="name" class="font-bold">Your name</label>
+                    <input type="text" name="name" placeholder="Abc" class="text-[#9F9F9F]
+                        border-1 border-[#9F9F9F] py-2.5 px-2.5 rounded-[10px]">
+                </div>
+                <div class="input-2 flex flex-col space-y-3">
+                    <label for="name" class="font-bold">Email address</label>
+                    <input type="text" name="name" placeholder="Abc@def.com" class="text-[#9F9F9F]
+                        border-1 border-[#9F9F9F] py-2.5 px-2.5 rounded-[10px]">
+                </div>
+                <div class="input-3 flex flex-col space-y-3">
+                    <label for="name" class="font-bold">Subject</label>
+                    <input type="text" name="name" placeholder="This is an optional" class="text-[#9F9F9F]
+                        border-1 border-[#9F9F9F] py-2.5 px-2.5 rounded-[10px]">
+                </div>
+                <div class="input-4 flex flex-col space-y-3">
+                    <label for="name" class="font-bold">Message</label>
+                    <input type="text" name="name" placeholder="Hi! i’d like to ask about" class="text-[#9F9F9F]
+                        border-1 border-[#9F9F9F] py-2.5 px-2.5 rounded-[10px]">
+                </div>
+                <div class="input-5">
+                    <button type="button" class="text-white bg-[#B88E2F] rounded-[8px]
+                        py-2.5 px-16 cursor-pointer ">
+                        Submit
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+<app-frame></app-frame>

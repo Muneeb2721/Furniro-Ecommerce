@@ -1,0 +1,83 @@
+<div class="header">
+
+<header class="h-[70px] bg-white">
+
+    <div class="navbar flex relative top-[7px] items-center
+      lg2:justify-around lg2:px-0 
+      lg1:justify-around lg1:px-0 
+      md2:justify-around md2:px-0 
+      md1:justify-between md1:px-10 
+      sm2:justify-between sm2:px-10 
+      sm1:justify-between sm1:px-10 
+      xs1:justify-between xs1:px-10
+      justify-between px-10">
+
+      <div (click)="homePage()"
+        class="logo group flex items-center cursor-pointer">
+        <img src="/assets/imgHome/logo.png" alt="Logo Image" class="w-[65px] h-[65px]" />
+        <h1 class="font-montserrat text-[34px] font-bold relative right-[5px]">Furniro</h1>
+      </div>
+
+      <div class="desktop-menu gap-25 items-center 
+        lg2:flex lg1:flex md2:flex md1:hidden sm2:hidden sm1:hidden hidden">
+        <div class="nav">
+          <ul class="flex font-poppins text-[16px] font-medium gap-6
+             ">
+            <li><a (click)="homePage()" class="cursor-pointer">Home</a></li>
+            <li><a (click)="shopPage()" class="cursor-pointer">Shop</a></li>
+            <li><a (click)="aboutPage()" class="cursor-pointer"  >About</a></li>
+            <li><a (click)="contactPage()" class="cursor-pointer">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="icons flex gap-10">
+          <fa-icon [icon]="faUser" class="cursor-pointer"></fa-icon>
+          <fa-icon [icon]="faSearch" class="cursor-pointer"></fa-icon>
+          <fa-icon [icon]="faHeart" class="cursor-pointer"></fa-icon>
+          <fa-icon [icon]="faShoppingCart" class="cursor-pointer" (click)="redirectToCartSideBar()"></fa-icon>
+          <span class="cart-items-no absolute top-[5px] right-[102px] bg-red-600 text-white py-1 px-3 text-[15px] font-bold rounded-[11px]">
+            {{ cartCount$ | async }}
+          </span>
+          <p id="sidebar" *ngIf="openSidebar" class="cart-sidebar absolute z-50 right-0 top-0"><app-cart-sidebar (closeSidebar)="closeSidebar()"></app-cart-sidebar></p>
+        </div>
+      </div>
+
+      <div class="bars md2:hidden lg1:hidden lg2:hidden">
+        <fa-icon [icon]="faBars" class="text-4xl text-red-600 cursor-pointer"
+          (click)="toggleMobileMenu()">
+        </fa-icon> 
+      </div>
+    </div>
+
+    <div id="mobilemenu" class="hidden bg-white absolute h-full w-[60%] px-5 py-8 space-y-10 top-17.5 right-0 z-50
+         lg1:hidden 
+         lg2:hidden
+         md1:w-[40%] md1:px-5 md1:py-8 
+         md2:hidden
+         sm2:w-[45%] sm2:px-5 sm2:py-8
+         sm1:w-[50%] sm1:px-5 sm1:py-8
+         xs1:w-[110%] xs1:px-5 xs1:py-8 xs1:left-106">
+        
+        <div class="nav">
+          <ul class="font-poppins text-[16px] font-medium space-y-10">
+            <li class=""><a (click)="homePage()" class="cursor-pointer">Home</a></li>
+            <li class=""><a (click)="shopPage()" class="cursor-pointer">Shop</a></li>
+            <li class=""><a (click)="aboutPage()" class="cursor-pointer">About</a></li>
+            <li class=""><a (click)="contactPage()" class="cursor-pointer">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="icons cursor-pointer space-x-10">
+          <fa-icon [icon]="faUser" class="cursor-pointer"></fa-icon>
+          <fa-icon [icon]="faSearch" class="cursor-pointer"></fa-icon>
+          <fa-icon [icon]="faHeart" class="cursor-pointer"></fa-icon>
+          <fa-icon [icon]="faShoppingCart" class="cursor-pointer" (click)="redirectToCartSideBar()"></fa-icon>
+          <span class="cart-items-no absolute top-[5px] right-[102px] bg-red-600 text-white py-1 px-3 text-[15px] font-bold rounded-[11px]">
+            {{ cartCount$ | async }}
+            <p id="sidebar" *ngIf="openSidebar" class="cart-sidebar absolute z-50 right-0 top-0"><app-cart-sidebar (closeSidebar)="closeSidebar()"></app-cart-sidebar></p>
+          </span>
+        </div>
+    </div>
+
+</header>
+</div>

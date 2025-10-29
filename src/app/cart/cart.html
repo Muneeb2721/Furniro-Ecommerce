@@ -1,0 +1,130 @@
+<div class="cart-page font-poppins mb-12">
+    <div class="shop-banner relative flex flex-col h-80 bg-cover bg-center justify-center items-center"
+        style="background-image: url('assets/imgHome/image25.jpg')">
+        <div class="absolute inset-0 bg-white opacity-50 z-10"></div>
+
+        <div class="relative z-20 flex flex-col items-center h-full w-full mt-8">
+            <img src="assets\imgHome\logo.png" alt="Logo" class="w-24 h-24" />
+            <h2 class="text-[45px] text-[#000000]">Cart</h2>
+            <p class="text-[18px] text-[#000000]">
+                <span class="font-semibold"><a class="cursor-pointer" (click)="redirectToHome()"> Home</a> &gt; </span>  Cart
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="cart font-poppins flex justify-center gap-5 mb-8 overflow-x-hidden
+xs1:flex-col
+xs2:flex-col
+sm1:flex-col
+sm2:flex-col
+md1:flex-col
+md2:flex-col
+lg1:px-2">
+    
+    <div class="items-wrapper space-y-7
+    xs1:px-6
+    xs2:mb-50
+    sm1:mb-50
+    sm2:mb-12
+    md1:mb-12
+    md2:mb-10">
+        
+        <div class="items-head bg-[#F9F1E7] flex items-center gap-24 py-1.5 relative pl-10 pr-10
+        xs1:pl-1: xs1:gap-[12%]
+        xs2:pl-1 xs2:gap-[12%]
+        sm1:pl-6 sm1:gap-[16%]
+        sm2:pl-52 sm2:gap-[12%]
+        md1:pl-52 md1:gap-[12%]
+        md2:pl-52 md2:gap-[16%]
+        lg1:pl-52 lg1:gap-[12%]">
+            <p class="img px-4 py-4 invisible"></p>
+            <p class="font-bold text-[16px]">Product</p>
+            <p class="font-bold text-[16px]">Price</p>
+            <p class="font-bold text-[16px]">Quantity</p>
+            <p class="font-bold text-[16px] relative right-11
+            xs2:right-0
+            sm1:right-5
+            sm2:right-0
+            md1:right-0
+            md2:right-0
+            lg1:right-3">Subtotal</p>
+        </div>
+
+        <div *ngFor="let product of cartItems"
+        class="items-name flex items-center gap-14 py-1.5 
+        xs2:flex-wrap xs2:pl-1 xs2:gap-12
+        sm1:flex-wrap sm1:pl-3 sm1:gap-12 sm1:w-fit
+        sm2:flex-wrap sm2:pl-3 sm2:gap-14
+        md1:pl-3 md1:gap-12
+        md2:pl-3 md2:gap-14
+        lg1:pl-3 lg1:gap-12">
+            <p class="img px-4 py-4 bg-[#F9F1E7] rounded-[8px] 
+            xs2:absolute xs2:top-150
+            sm1:absolute sm1:top-150">
+                <img [src]="product.imageUrl" alt="Product Image" 
+                class="w-24 h-24">
+            </p>
+            <p class="text-[16px] text-[#9F9F9F] 
+            xs2:w-[10%] xs2:text-center
+            sm1:text-center
+            sm2:text-center sm2:w-[10%]
+            md1:text-center md1:w-[10%]
+            lg1:text-center 
+            lg2:pr-6">{{product.title}}</p>
+            <p class="text-[16px] text-[#9F9F9F] 
+            xs2:w-[20%] xs2:text-center
+            sm1:text-center
+            sm2:text-center sm2:w-[10%]
+            md1:text-center md1:w-[10%]
+            lg1:text-center
+            lg2:pr-8">{{product.discountAmount}}</p>
+            <p class="font-bold text-[16px] border-1 border-[#9F9F9F] rounded-[8px] px-1 py-2
+            xs2:px-3 xs2:py-1
+            sm1:px-3 sm1:py-1 sm1:relative sm1:left-5
+            md1:relative md1:left-7
+            md2:relative md2:left-14
+            "><fa-icon [icon]="faMinus" class="relative cursor-pointer" (click)="updateQuantity(product, -1)"></fa-icon> {{product.quantity}} <fa-icon [icon]="faPlus" class="relative cursor-pointer" (click)="updateQuantity(product, 1)"></fa-icon></p>
+            <p class="font-bold text-[16px] 
+            xs2:w-[20%] xs2:text-center
+            sm1:text-center sm1:relative sm1:left-12
+            sm2:text-center sm2:w-[10%] sm2:relative sm2:left-9
+            md1:relative md1:left-13
+            md2:relative md2:left-29
+            lg1:text-center
+            lg2:pl-6">
+            
+            {{ (product?.discountAmount || 0) * (product?.quantity || 0) }}
+
+            
+            </p>
+
+            <fa-icon [icon]="faDelete" (click)="remove(product.title)" class="text-red-700 cursor-pointer 
+            sm1:relative sm1:left-8
+            sm2:relative sm2:left-8
+            md1:relative md1:left-14
+            md2:relative md2:left-30"></fa-icon>
+        </div>
+
+    </div>
+
+    <div class="checkout bg-[#F9F1E7] flex flex-col gap-10 pt-3 pb-25 px-20 rounded-[8px]
+    xs2:w-fit xs2:mx-auto 
+    sm1:w-fit sm1:mx-auto 
+    sm2:w-fit sm2:mx-auto 
+    md1:w-fit md1:mx-auto 
+    lg1:w-fit lg1:px-4
+    ">
+        <h2 class="text-[32px] text-black font-semibold
+        md2:text-center">Cart Totals</h2>
+        <div
+            class="prices flex flex-col items-center gap-6 relative top-8">
+            <div class="flex gap-7"><p class="">Subtotal</p> <span class="text-[#9F9F9F] text-[16px]">{{ subtotal }}</span></div>
+            <div class="flex gap-7"><p class="">Total</p> <span class="text-[#B88E2F] text-[16px]">{{ subtotal }}</span></div>
+            <div class="flex"><a (click)="redirectToCheckout()" class="px-12 py-2.5 border-1 border-black rounded-[8px] cursor-pointer">Check out</a></div>
+        </div>
+    </div>
+    
+</div>
+
+<app-frame></app-frame>

@@ -1,0 +1,230 @@
+<div class="shop font-poppins mb-12">
+    <div class="shop-banner relative flex flex-col h-70 bg-cover bg-center justify-center items-center"
+        style="background-image: url('assets/imgHome/image25.jpg')">
+        <div class="absolute inset-0 bg-white opacity-50 z-10"></div>
+        <!-- Text Content -->
+        <div class="relative z-20 flex flex-col items-center justify-center h-full w-full text-center 
+        leading-[50px] 
+        xs2:space-y-3
+        sm1:space-y-3">
+            <h2 class="text-[48px] text-[#000000]
+            xs2:text-[36px]
+            sm1:text-[36px]">Product Comparison</h2>
+            <p class="text-[18px] text-[#000000]">
+                <span class="font-semibold"><a class="cursor-pointer" (click)="redirectToHome()"> Home</a> &gt; </span>Product Comparison
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="product-comparison flex gap-8 justify-around mb-10
+xs2:flex-col-reverse xs2:items-center
+sm1:flex-col-reverse sm1:items-center
+sm2:flex-wrap sm2:gap-10
+md1:flex-wrap md1:gap-10">
+
+    <div class="w-[15%]
+    xs2:w-[70%] xs2:text-center xs2:space-y-3
+    sm1:w-[70%] sm1:text-center sm1:space-y-3
+    sm2:w-[70%] sm2:text-center sm2:space-y-3
+    md1:w-[70%] md1:text-center md1:space-y-3">
+        <h2 class="text-[28px] text-[black] w-fit leading-[35px]
+        xs2:text-[20px] xs2:font-bold xs2:text-center xs2:w-full
+        sm1:text-[24px] sm1:font-bold sm1:text-center sm1:w-full
+        sm2:text-[26px] sm2:font-bold sm2:text-center sm2:w-full
+        md1:text-[26px] md1:font-bold md1:text-center md1:w-full">Go to Product page for more Products</h2>
+        <a class="text-[20px] text-[#727272] border-b-2 border-b-[#727272] cursor-pointer w-fit">View More</a>
+    </div>
+    
+    <div class="flex gap-8">
+        <div class="">
+            <div class="bg-[#F9F1E7] rounded-[8px] flex justify-center items-center">
+                <img src="assets\imgSingleProduct\asgaad-sofa.png" class="w-48 h-36">
+            </div> 
+            <div class="space-y-1">
+                <h4 class="text-[#000000] text-[24px]">Asgaard Sofa</h4>
+                <p class="text-[#000000] text-[18px]">Rs. 250,000.00</p>
+                <div class="flex gap-2 items-center">
+                    <p class="text-[#000000] text-[18px]">4.7</p>
+                    <div class="stars">
+                        <fa-icon [icon]="faStar" class="text-[#FFC700]"></fa-icon>
+                        <fa-icon [icon]="faStar" class="text-[#FFC700]"></fa-icon>
+                        <fa-icon [icon]="faStar" class="text-[#FFC700]"></fa-icon>
+                        <fa-icon [icon]="faStar" class="text-[#FFC700]"></fa-icon>
+                        <fa-icon [icon]="faStar" class="text-[#FFC700]"></fa-icon>
+                    </div>
+                    <p class="review text-[#9F9F9F] text-[13px] border-l-1 pl-2">204 Review</p>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="bg-[#F9F1E7] rounded-[8px] flex justify-center items-center">
+                <img src="assets\imgSingleProduct\outdoor-sofa.png" class="w-48 h-36">
+            </div> 
+            <div class="space-y-1">
+                <h4 class=" text-[#000000] text-[24px]">Outdoor Sofa Set</h4>
+                <p class=" text-[#000000] text-[18px]">Rs. 224,000.00</p>
+                <div class="flex gap-2 items-center">
+                    <p class="text-[#000000] text-[18px]">4.2</p>
+                    <div class="stars">
+                        <fa-icon [icon]="faStar" class="text-[#FFC700]"></fa-icon>
+                        <fa-icon [icon]="faStar" class="text-[#FFC700]"></fa-icon>
+                        <fa-icon [icon]="faStar" class="text-[#FFC700]"></fa-icon>
+                        <fa-icon [icon]="faStar" class="text-[#FFC700]"></fa-icon>
+                        <fa-icon [icon]="faStar" class="text-[#FFC700]"></fa-icon>
+                    </div>
+                    <p class="review text-[#9F9F9F] text-[13px] border-l-1 pl-2">145 Review</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-dropdown">
+        <h2 class="text-[24px] text-[#000000] font-bold mb-2 text-center">Add A Product</h2>
+        <select
+            class="bg-[#B88E2F] rounded-[8px] text-[#FFFFFF] font-semibold px-5 py-2 focus:outline-none focus:ring-2 focus:ring-[#B88E2F] w-full">
+            <option value="" disabled selected>Select a product</option>
+            <option value="asgaard-sofa">Asgaard Sofa</option>
+            <option value="outdoor-sofa-set">Outdoor Sofa Set</option>
+            <option value="modern-chair">Modern Chair</option>
+            <option value="classic-table">Classic Table</option>
+        </select>
+    </div>
+
+</div>
+
+<div class="product-comparison-details border-t-1 border-t-[#E8E8E8] flex mb-8
+xs2:px-4">
+    
+    <div class="first-col flex flex-col border-r-1 border-[#E8E8E8] gap-8
+    xs2:w-[200%]">
+
+        <div class="general space-y-2">
+            <h5 class="text-[#000000] text-[28px] xs2:text-[18px] xs2:font-bold">General</h5>
+            <p class="text-[16px] xs2:text-[12px]">Sales Package</p>
+            <p class="text-[16px] xs2:text-[12px]">Model Number</p>
+            <p class="text-[16px] xs2:text-[12px]">Secondary Material</p>
+            <p class="text-[16px] xs2:text-[12px]">Configuration</p>
+            <p class="text-[16px] xs2:text-[12px]">Upholstery Material</p>
+            <p class="text-[16px] xs2:text-[12px]">Upholstery Color</p>
+        </div>
+        <div class="product space-y-2">
+            <h5 class="text-[#000000] text-[28px] xs2:text-[18px] xs2:font-bold">Product</h5>
+            <p class="text-[16px] xs2:text-[12px]">Filling Material</p>
+            <p class="text-[16px] xs2:text-[12px]">Finish Type</p>
+            <p class="text-[16px] xs2:text-[12px]">Adjustable Headrest</p>
+            <p class="text-[16px] xs2:text-[12px]">Maximum Load Capacity</p>
+            <p class="text-[16px] xs2:text-[12px]">Origin of Manufacture</p>
+        </div>
+        <div class="dimensions space-y-2">
+            <h5 class="text-[#000000] text-[28px] xs2:text-[18px] xs2:font-bold">Dimensions</h5>
+            <p class="text-[16px] xs2:text-[12px]">Width</p>
+            <p class="text-[16px] xs2:text-[12px]">Height</p>
+            <p class="text-[16px] xs2:text-[12px]">Depth</p>
+            <p class="text-[16px] xs2:text-[12px]">Weight</p>
+            <p class="text-[16px] xs2:text-[12px]">Seat Height</p>
+            <p class="text-[16px] xs2:text-[12px]">Leg Height</p>
+        </div>
+        <div class="warranty flex flex-col">
+            <h5 class="text-[#000000] text-[28px] 
+            xs2:text-[18px] xs2:font-bold xs2:mb-10">Warranty</h5>
+            <p class="text-[16px] xs2:text-[12px] xs2:mb-19">Warranty Summary</p>
+            <p class="text-[16px] xs2:text-[12px] xs2:mb-37">Warranty Service Type</p>
+            <p class="text-[16px] xs2:text-[12px] xs2:mb-19">Covered in Warranty</p>
+            <p class="text-[16px] xs2:text-[12px] xs2:mb-50">Not Covered in Warranty</p>
+            <p class="text-[16px] xs2:text-[12px]">Domestic Warranty</p>
+        </div>    
+
+    </div>
+    
+    <div class="second-col flex flex-col border-r-1 border-[#E8E8E8] gap-8
+    xs2:w-[26%]">
+
+        <div class="second-col-general space-y-2">
+            <h5 class="invisible text-[#000000] text-[28px] xs2:text-[18px] xs2:font-bold">General</h5>
+            <p class="text-[16px] xs2:text-[12px]">1 sectional sofa</p>
+            <p class="text-[16px] xs2:text-[12px]">TFCBLIGRBL6SRHS</p>
+            <p class="text-[16px] xs2:text-[12px]">Solid Wood</p>
+            <p class="text-[16px] xs2:text-[12px]">L-shaped</p>
+            <p class="text-[16px] xs2:text-[12px]">Fabric + Cotton</p>
+            <p class="text-[16px] xs2:text-[12px]">Bright Grey & Lion</p>
+        </div>
+        <div class="second-col-product space-y-2">
+            <h5 class="invisible text-[#000000] text-[28px] xs2:text-[18px] xs2:font-bold">Product</h5>
+            <p class="text-[16px] xs2:text-[12px] ">Foam</p>
+            <p class="text-[16px] xs2:text-[12px] ">Bright Grey & Lion</p>
+            <p class="text-[16px] xs2:text-[12px] ">No</p>
+            <p class="text-[16px] xs2:text-[12px] ">280 KG</p>
+            <p class="text-[16px] xs2:text-[12px] ">India</p>
+        </div>
+        <div class="second-col-dimensions space-y-2">
+            <h5 class="invisible text-[#000000] text-[28px] xs2:text-[18px] xs2:font-bold">Dimensions</h5>
+            <p class="text-[16px] xs2:text-[12px] ">265.32 cm</p>
+            <p class="text-[16px] xs2:text-[12px] ">76 cm</p>
+            <p class="text-[16px] xs2:text-[12px] ">167.76 cm</p>
+            <p class="text-[16px] xs2:text-[12px] ">45 KG</p>
+            <p class="text-[16px] xs2:text-[12px] ">41.52 cm</p>
+            <p class="text-[16px] xs2:text-[12px] ">5.46 cm</p>
+        </div>
+        <div class="second-col-warranty flex flex-col gap-14
+        xs2:gap-10">
+            <h5 class="invisible text-[#000000] text-[28px] 
+            xs2:text-[18px] xs2:font-bold">Warranty</h5>
+            <p class="text-[16px] xs2:text-[12px] break-words xs2:px-2">1 Year Manufacturing Warranty</p>
+            <p class="text-[16px] xs2:text-[12px] break-words xs2:px-2">For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com</p>
+            <p class="text-[16px] xs2:text-[12px] break-words xs2:px-2">Warranty Against Manufacturing Defect</p> 
+            <p class="text-[16px] xs2:text-[12px] break-words xs2:px-2">The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.</p>
+            <p class="text-[16px] xs2:text-[12px] break-words xs2:px-2">1 Year</p>
+            <a class="bg-[#B88E2F] text-[#FFFFFF] text-[20px] rounded-[3px] px-4 py-3 w-fit cursor-pointer
+            xs2:px-1 xs2:py-2 xs2:mx-auto">Add to Cart</a>
+        </div>   
+
+    </div>
+    
+    <div class="third-col flex flex-col gap border-r-1 border-[#E8E8E8] gap-8
+    xs2:w-[200%]">
+
+        <div class="third-col-general space-y-2">
+            <h5 class="invisible text-[#000000] text-[28px] xs2:text-[18px] xs2:font-bold">General</h5>
+            <p class="text-[16px] xs2:text-[12px]">1 Three Seater, 2 Single Seater</p>
+            <p class="text-[16px] xs2:text-[12px] ">DTUBLIGRBL568</p>
+            <p class="text-[16px] xs2:text-[12px] ">Solid Wood</p>
+            <p class="text-[16px] xs2:text-[12px] ">L-shaped</p>
+            <p class="text-[16px] xs2:text-[12px] ">Fabric + Cotton</p>
+            <p class="text-[16px] xs2:text-[12px] ">Bright Grey & Lion</p>
+        </div>
+        <div class="third-col-product space-y-2">
+            <h5 class="invisible text-[#000000] text-[28px] xs2:text-[18px] xs2:font-bold">Product</h5>
+            <p class="text-[16px] xs2:text-[12px] ">Matte</p>
+            <p class="text-[16px] xs2:text-[12px] ">Bright Grey & Lion</p>
+            <p class="text-[16px] xs2:text-[12px] ">Yes</p>
+            <p class="text-[16px] xs2:text-[12px] ">300 KG</p>
+            <p class="text-[16px] xs2:text-[12px] ">India</p>
+        </div>
+        <div class="third-col-dimensions space-y-2">
+            <h5 class="invisible text-[#000000] text-[28px] xs2:text-[18px] xs2:font-bold">Dimensions</h5>
+            <p class="text-[16px] xs2:text-[12px] ">265.32 cm</p>
+            <p class="text-[16px] xs2:text-[12px] ">76 cm</p>
+            <p class="text-[16px] xs2:text-[12px] ">167.76 cm</p>
+            <p class="text-[16px] xs2:text-[12px] ">65 KG</p>
+            <p class="text-[16px] xs2:text-[12px] ">41.52 cm</p>
+            <p class="text-[16px] xs2:text-[12px] ">5.46 cm</p>
+        </div>
+        <div class="third-col-warranty flex flex-col gap-14
+        xs2:gap-10">
+            <h5 class="invisible text-[#000000] text-[28px] 
+            xs2:text-[18px] xs2:font-bold">Warranty</h5>
+            <p class="text-[16px] xs2:text-[12px] break-words xs2:px-2 xs2:mb-4">1.2 Year Manufacturing Warranty</p>
+            <p class="text-[16px] xs2:text-[12px] break-words xs2:px-2 xs2:mb-14">For Warranty Claims or Any Product Related Issues Please Email at support@xyz.com</p>
+            <p class="text-[16px] xs2:text-[12px] break-words xs2:px-2 ">Warranty of the product is limited to manufacturing defects only.</p>
+            <p class="text-[16px] xs2:text-[12px] break-words xs2:px-2 xs2:mb-14">The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.</p>
+            <p class="text-[16px] xs2:text-[12px] break-words xs2:px-2">3 Months</p>
+            <a class="bg-[#B88E2F] text-[#FFFFFF] text-[20px] rounded-[3px] px-4 py-3 w-fit cursor-pointer
+            xs2:px-3 xs2:py-2 xs2:mx-auto">Add to Cart</a>
+        </div>    
+
+    </div>
+
+</div>
+
+<app-frame></app-frame>

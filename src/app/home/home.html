@@ -1,0 +1,947 @@
+<div class="banner h-[40rem] w-full relative top-0 bg-cover bg-center mb-12"
+    style="background-image: url('assets/imgHome/scandivle.jpg')">
+    <div class="arrival bg-[#FFF3E3] font-poppins h-[423px] rounded-[10px] relative top-30
+        lg2:w-[47%] lg2:left-[51%]
+        lg1:w-[47%] lg1:left-[51%]
+        md2:left-[38%] md2:w-[60%]
+        md1:left-[36%] md1:w-[60%]
+        sm2:left-[28%] sm2:w-[70%]
+        sm1:left-[5%] sm1:w-[90%]
+        left-4 w-[95%]">
+        <div class="text relative left-5 top-15 w-[90%]">
+            <h4 class="text-[#333333] text-[16px] font-light tracking-wide w-fit">
+                New Arrival
+            </h4>
+            <h1 class="text-[#B88E2F] text-[52px] leading-[65px] font-bold">
+                Discover Our New Collection
+            </h1>
+            <p class="text-[18px] text-[#333333] w-fit">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+                tellus, luctus nec ullamcorper mattis.
+            </p>
+        </div>
+        <div class="common-btn relative left-6 top-25 max-w-fit">
+            <button type="button" class="bg-[#B88E2F] text-white text-[16px] py-[20px] px-[75px] cursor-pointer"
+                (click)="redirectToShop()">
+                BUY NOW
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="categories mb-24">
+    <h2 class="font-poppins text-[#333333] text-[32px] text-center font-semibold">
+        Browse The Range
+    </h2>
+
+    <p class="font-poppins text-[#666666] text-[20px] text-center mb-12">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </p>
+
+    <div class="categories-card flex justify-center gap-4
+        xs2:flex-wrap xs2:gap-17 
+        xs1:px-4">
+
+        <div class="card-1 h-96 rounded-[10px]
+            lg2:w-1/4
+            lg1:w-1/4
+            md2:w-1/4
+            md1:w-[30%]
+            sm2:w-[40%]
+            sm1:w-[30%]
+            xs2:w-[75%]">
+            <img src="assets/imgHome/image10.png" alt="Dining" class="object-cover h-full rounded-[8px] mb-1" />
+            <h4 class="font-poppins text-[#333333] text-[24px] text-center">
+                Dining
+            </h4>
+        </div>
+
+        <div class="card-2 h-96 rounded-[10px]
+            lg2:w-1/4
+            lg1:w-1/4
+            md2:w-1/4
+            md1:w-[30%]
+            sm2:w-[40%]
+            sm1:w-[30%]
+            xs2:w-[75%]">
+            <img src="assets/imgHome/image16.png" alt="Living" class="object-cover h-full rounded-[8px] mb-1" />
+            <h4 class="font-poppins text-[#333333] text-[24px] text-center">
+                Living
+            </h4>
+        </div>
+
+        <div class="card-3 h-96 rounded-[10px]
+            lg2:w-1/4
+            lg1:w-1/4
+            md2:w-1/4
+            md1:w-[30%]
+            sm2:w-[40%]
+            sm1:w-[30%]
+            xs2:w-[75%]">
+            <img src="assets/imgHome/image5.png" alt="Bedroom" class="object-cover h-full rounded-[8px] mb-1" />
+            <h4 class="font-poppins text-[#333333] text-[24px] text-center">
+                Bedroom
+            </h4>
+        </div>
+
+    </div>
+</div>
+
+<div class="product mb-16">
+
+    <h2 class="font-poppins text-[#333333] text-[32px] text-center font-semibold mb-12">
+        Our Products
+    </h2>
+
+    <div  
+    class="products-card flex justify-center gap-4 flex-wrap space-y-20
+        xs1:gap-4
+        xs2:gap-2 xs2:space-y-28
+        sm1:gap-2
+        sm2:gap-3
+        md1:gap-2
+        md2:gap-2
+        lg1:gap-2">
+        <div class="product-card-1 w-1/5 h-96 rounded-[10px]
+        xs1:w-[40%]
+        xs2:w-[49%]
+        sm1:w-[46%]
+        sm2:w-[40%]
+        md1:w-[30%]
+        md2:w-[27%]
+        lg1:w-[23%]
+        lg2:w-[21%]">
+            <div class="product-card-image h-[20rem] bg-cover bg-center cursor-pointer"
+
+                [style.background-image]="'url(' + products[0].imageUrl + ')'" 
+                (mouseenter)="showOverlay(0, true)" (mouseleave)="showOverlay(0, false)">
+                <div class="saleOffer relative left-50 top-2 bg-[#E97171] text-white text-center font-poppins rounded-full w-fit py-3 px-1
+                xs1:left-[80%]        
+                xs2:left-[75%]
+                        sm1:left-[80%]
+                        sm2:left-[80%]
+                        md1:left-[78%]
+                        md2:left-[77%]
+                        lg1:left-[76%]
+                        lg2:left-[78%]">
+                    {{products[0].discount}}
+                </div>
+            </div>
+
+            <div class="product-description bg-[#F4F5F7]
+            xs2:px-2
+            sm1:px-4
+            sm2:px-4
+            md1:px-1
+            md2:px-4
+            lg1:px-2
+            lg2:px-1">
+                <div class="px-2 product-name py-2">
+                    <div class="flex justify-between items-baseline
+                    xs2:flex-col">
+                        <h3 class="font-semibold text-[#3A3A3A] text-[24px]">{{products[0].title}}</h3>
+                        <a class="text-[#898989] text-[16px] cursor-pointer" (click)="productDetail()">
+                            {{products[0].detailUrl}}</a>
+                    </div>
+                    <p class="text-[#898989] text-[16px]">{{products[0].subtitle}}</p>
+                </div>
+
+                <div class="px-2 product-price flex justify-between items-center py-4
+                xs2:flex-col xs2:items-start">
+                    <h4 class="font-semibold text-[#3A3A3A] text-[20px] 
+                    xs2:text-[16px]">Rs. {{products[0].actualAmount}}</h4>
+                    <p class="text-[#898989] text-[16px] line-through
+                    xs2:text-[16px]">Rs. {{products[0].discountAmount}}</p>
+                </div>
+
+            </div>
+            <div class="overlay flex flex-col justify-center items-center relative bottom-114.5 h-114.5 bg-[#3A3A3A] opacity-80
+            xs2:h-124 xs2:bottom-125"
+                [class.hidden]="!showOverlays[0]"
+                (mouseenter)="showOverlay(0, true)" 
+                (mouseleave)="showOverlay(0, false)">     
+                <div class="overlay-action-btn mb-4 z-100">
+                    <button (click)="add(products[0])" type="button"
+                        class="text-[#B88E2F] cursor-pointer bg-white font-bold py-3 px-8">
+                        Add to cart
+                    </button>
+                </div> 
+
+                <div class="overlay-action-bar text-center space-x-3 z-50">
+                    <a (click)="show()" class="share text-[16px] text-white inline-flex items-center cursor-pointer">
+                        <fa-icon [icon]="faShare" class="mr-1"></fa-icon> Share
+                    </a>
+                    <a (click)="redirectToComparison()"
+                        class="compare text-[16px] text-white inline-flex items-center cursor-pointer">
+                        <fa-icon [icon]="faCompare" class="mr-1"></fa-icon> Compare
+                    </a>
+                    <a (click)="show()" class="like text-[16px] text-white inline-flex items-center cursor-pointer">
+                        <fa-icon [icon]="faHeart" class="mr-1"></fa-icon> Like
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card-2 w-1/5 h-96 rounded-[10px]
+        xs1:w-[40%]
+        xs2:w-[49%]
+        sm1:w-[46%]
+        sm2:w-[40%]
+        md1:w-[30%]
+        md2:w-[27%]
+        lg1:w-[23%]
+        lg2:w-[21%]">
+            <div class="product-card-image h-[20rem] bg-cover bg-center cursor-pointer"
+                [style.background-image]="'url(' + products[1].imageUrl + ')'" 
+                (mouseenter)="showOverlay(1, true)" (mouseleave)="showOverlay(1, false)">
+                <div class="saleOffer relative left-50 top-2 bg-[#E97171] text-white text-center font-poppins rounded-full w-fit py-3 px-1
+                xs1:left-[80%]        
+                xs2:left-[75%]
+                        sm1:left-[80%]
+                        sm2:left-[80%]
+                        md1:left-[78%]
+                        md2:left-[77%]
+                        lg1:left-[76%]
+                        lg2:left-[78%]">
+                        {{products[1].discount}}
+
+                </div>
+            </div>
+            <div class="product-description bg-[#F4F5F7]
+                xs2:px-2
+                sm1:px-4
+                sm2:px-4
+                md1:px-1
+                md2:px-4
+                lg1:px-2
+                lg2:px-1">
+                <div class="px-2 product-name py-2">
+                    <div class="flex justify-between items-baseline xs2:flex-col">
+                        <h3 class="font-semibold text-[#3A3A3A] text-[24px]">{{products[1].title}}</h3>
+                        <a class="text-[#898989] text-[16px] cursor-pointer" (click)="productDetail()">
+                            {{products[1].detailUrl}}
+                        </a>
+                    </div>
+
+                    <p class="text-[#898989] text-[16px]">{{products[1].subtitle}}</p>
+                </div>
+                <div class="px-2 product-price flex justify-between items-center py-4 xs2:flex-col xs2:items-start">
+                    <h4 class="font-semibold text-[#3A3A3A] text-[20px] 
+                    xs2:text-[16px]">Rs. {{products[1].discountAmount}}</h4>
+                    <p class="text-[#898989] text-[16px] line-through invisible 
+                    xs2:text-[16px]">Rs. {{products[1].actualAmount}}</p>
+                </div>
+            </div>
+            <div class="overlay flex flex-col justify-center items-center relative bottom-114.5 h-114.5 bg-[#3A3A3A] opacity-80
+            xs2:h-124 xs2:bottom-125"
+                [class.hidden]="!showOverlays[1]"
+                (mouseenter)="showOverlay(1, true)"
+                (mouseleave)="showOverlay(1, false)">
+                <div class="overlay-action-btn mb-4 z-50">
+                    <button (click)="add(products[1])" type="button" 
+                        class="text-[#B88E2F] bg-white font-bold py-3 px-8 cursor-pointer">
+                        Add to cart
+                    </button>
+                </div>
+
+                <div class="overlay-action-bar text-center space-x-3 z-50">
+                    <a (click)="show()" class="share text-[16px] text-white inline-flex items-center cursor-pointer">
+                        <fa-icon [icon]="faShare" class="mr-1"></fa-icon> Share
+                    </a>
+                    <a (click)="redirectToComparison()"
+                        class="compare text-[16px] text-white inline-flex items-center cursor-pointer">
+                        <fa-icon [icon]="faCompare" class="mr-1"></fa-icon> Compare
+                    </a>
+                    <a (click)="show()" class="like text-[16px] text-white inline-flex items-center cursor-pointer">
+                        <fa-icon [icon]="faHeart" class="mr-1"></fa-icon> Like
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card-3 w-1/5 h-96 rounded-[10px]
+
+xs1:w-[40%]
+        xs2:w-[49%]
+        sm1:w-[46%]
+        sm2:w-[40%]
+        md1:w-[30%]
+        md2:w-[27%]
+        lg1:w-[23%]
+        lg2:w-[21%]">
+            <div class="product-card-image h-[20rem] bg-cover bg-center cursor-pointer"
+                [style.background-image]="'url(' + products[2].imageUrl + ')'" 
+
+                (mouseenter)="showOverlay(2, true)" (mouseleave)="showOverlay(2, false)">
+                <div class="saleOffer relative left-50 top-2 bg-[#E97171] text-white text-center font-poppins rounded-full w-fit py-3 px-1
+                xs1:left-[80%]    
+                xs2:left-[75%]
+                    sm1:left-[80%]
+                    sm2:left-[80%]
+                    md1:left-[78%]
+                    md2:left-[77%]
+                    lg1:left-[76%]
+                    lg2:left-[78%]">
+                    {{ products[2].discount }}
+                </div>
+            </div>
+            <div class="product-description bg-[#F4F5F7]
+                xs2:px-2
+                sm1:px-4
+                sm2:px-4
+                md1:px-1
+                md2:px-4
+                lg1:px-2
+                lg2:px-1">
+                <div class="px-2 product-name py-2">
+                    <div class="flex justify-between items-baseline xs2:flex-col">
+                        <h3 class="font-semibold text-[#3A3A3A] text-[24px]">{{ products[2].title }}</h3>
+                        <a class="text-[#898989] text-[16px] cursor-pointer" (click)="productDetail()">
+                            {{products[2].detailUrl}}                        
+                        </a>
+                    </div>
+
+                    <p class="text-[#898989] text-[16px]">{{ products[2].subtitle }}</p>
+                </div>
+                <div class="px-2 product-price flex justify-between items-center py-4
+                xs2:flex-col xs2:items-start">
+                    <h4 class="font-semifont-semibold text-[#3A3A3A] text-[20px] 
+                    xs2:text-[16px]">Rs. {{ products[2].discountAmount }}</h4>
+                    <p class="text-[#898989] text-[16px] line-through 
+                    xs2:text-[16px]">Rs. {{ products[2].actualAmount }}</p>
+                </div>
+            </div>
+            <div class="overlay flex flex-col justify-center items-center relative bottom-114.5 h-114.5 bg-[#3A3A3A] opacity-80
+            xs2:h-124 xs2:bottom-125"
+                [class.hidden]="!showOverlays[2]"
+                (mouseenter)="showOverlay(2, true)"
+                (mouseleave)="showOverlay(2, false)">
+                <div class="overlay-action-btn mb-4 z-50">
+                    <button (click)="add(products[2])" type="button"
+                        class="text-[#B88E2F] bg-white font-bold py-3 px-8 cursor-pointer">
+                        Add to cart
+                    </button>
+                </div>
+
+                <div class="overlay-action-bar text-center space-x-3 z-50">
+                    <a (click)="show()" class="share text-[16px] text-white inline-flex items-center cursor-pointer">
+                        <fa-icon [icon]="faShare" class="mr-1"></fa-icon> Share
+                    </a>
+                    <a (click)="redirectToComparison()"
+                        class="compare text-[16px] text-white inline-flex items-center cursor-pointer">
+                        <fa-icon [icon]="faCompare" class="mr-1"></fa-icon> Compare
+                    </a>
+                    <a (click)="show()" class="like text-[16px] text-white inline-flex items-center cursor-pointer">
+                        <fa-icon [icon]="faHeart" class="mr-1"></fa-icon> Like
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card-4 w-1/5 h-96 rounded-[10px]
+        xs1:w-[40%]
+        xs2:w-[49%]
+        sm1:w-[46%]
+        sm2:w-[40%]
+        md1:w-[30%]
+        md2:w-[27%]
+        lg1:w-[23%]
+        lg2:w-[21%]">
+            <div class="product-card-image h-[20rem] bg-cover bg-center cursor-pointer"
+                [style.background-image]="'url(' + products[3].imageUrl + ')'"
+                (mouseenter)="showOverlay(3, true)" (mouseleave)="showOverlay(3, false)">
+                <div class="saleOffer relative left-50 top-2 bg-[#2EC1AC] text-white text-center font-poppins rounded-full w-fit py-3 px-2
+                xs1:left-[80%]    
+                xs2:left-[75%]
+                    sm1:left-[80%]
+                    sm2:left-[80%]
+                    md1:left-[78%]
+                    md2:left-[77%]
+                    lg1:left-[76%]
+                    lg2:left-[78%]">
+                    {{products[3].discount}}
+                </div>
+            </div>
+            <div class="product-description bg-[#F4F5F7]
+            xs2:px-2
+            sm1:px-4
+            sm2:px-4
+            md1:px-1
+            md2:px-4
+            lg1:px-2
+            lg2:px-1">
+                <div class="px-2 product-name py-2">
+                    <div class="flex justify-between items-baseline 
+                    xs2:flex-col">
+                        <h3 class="font-semibold text-[#3A3A3A] text-[24px]">{{products[3].title}}</h3>
+                        <a class="text-[#898989] text-[16px] cursor-pointer" (click)="productDetail()">
+                            {{products[3].detailUrl}}
+                        </a>
+                    </div>
+
+                    <p class="text-[#898989] text-[16px]">{{products[3].subtitle}}</p>
+                </div>
+                <div class="px-2 product-price flex justify-between items-center py-4
+                xs2:flex-col xs2:items-start">
+                    <h4 class="font-semibold text-[#3A3A3A] text-[20px] xs2:text-[16px]">Rs. {{products[3].discountAmount}}</h4>
+                    <p class="text-[#898989] text-[16px] line-through xs2:text-[16px] invisible">Rs. {{products[3].actualAmount}}</p>
+                </div>
+            </div>
+            <div class="overlay flex flex-col justify-center items-center relative bottom-114.5 h-114.5 bg-[#3A3A3A] opacity-80
+            xs2:h-124 xs2:bottom-125"
+                [class.hidden]="!showOverlays[3]"
+                (mouseenter)="showOverlay(3, true)"
+                (mouseleave)="showOverlay(3, false)">
+                <div class="overlay-action-btn mb-4 z-50">
+                    <button (click)="add(products[3])" type="button"
+                        class="text-[#B88E2F] bg-white font-bold py-3 px-8 cursor-pointer">
+                        Add to cart
+                    </button>
+                </div>
+
+                <div class="overlay-action-bar text-center space-x-3 z-50">
+                    <a (click)="show()" class="share text-[16px] text-white inline-flex items-center cursor-pointer">
+                        <fa-icon [icon]="faShare" class="mr-1"></fa-icon> Share
+                    </a>
+                    <a (click)="redirectToComparison()"
+                        class="compare text-[16px] text-white inline-flex items-center cursor-pointer">
+                        <fa-icon [icon]="faCompare" class="mr-1"></fa-icon> Compare
+                    </a>
+                    <a (click)="show()" class="like text-[16px] text-white inline-flex items-center cursor-pointer">
+                        <fa-icon [icon]="faHeart" class="mr-1"></fa-icon> Like
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card-5 w-1/5 h-96 rounded-[10px] 
+        xs1:w-[40%]
+        xs2:w-[49%]
+        sm1:w-[46%]
+        sm2:w-[40%]
+        md1:w-[30%]
+        md2:w-[27%]
+        lg1:w-[23%]
+        lg2:w-[21%]">
+            <div class="product-card-image h-[20rem] bg-cover bg-center cursor-pointer"
+                [style.background-image]="'url(' + products[4].imageUrl + ')'" 
+                (mouseenter)="showOverlay(4, true)" (mouseleave)="showOverlay(4, false)">
+                <div class="saleOffer relative left-50 top-2 bg-[#E97171] text-white text-center font-poppins rounded-full w-fit py-3 px-1
+                xs1:left-[80%]    
+                xs2:left-[75%]
+                    sm1:left-[80%]
+                    sm2:left-[80%]
+                    md1:left-[78%]
+                    md2:left-[77%]
+                    lg1:left-[76%]
+                    lg2:left-[78%]">
+                    {{products[4].discount}}
+                </div>
+            </div>
+            <div class="product-description bg-[#F4F5F7]
+            xs2:px-2
+            sm1:px-4
+            sm2:px-4
+            md1:px-1
+            md2:px-4
+            lg1:px-2
+            lg2:px-1">
+                <div class="px-2 product-name py-2">
+                    <div class="flex justify-between items-baseline xs2:flex-col">
+                        <h3 class="font-semibold text-[#3A3A3A] text-[24px]">{{products[4].title}}</h3>
+                        <a class="text-[#898989] text-[16px] cursor-pointer" (click)="productDetail()">
+                            {{products[4].detailUrl}}
+                        </a>
+                    </div>
+
+                    <p class="text-[#898989] text-[16px]">{{products[4].subtitle}}</p>
+                </div>
+                <div class="px-2 product-price flex justify-between items-center py-4
+                xs2:flex-col xs2:items-start">
+                    <h4 class="font-semibold text-[#3A3A3A] text-[20px] xs2:text-[16px]">Rs. {{products[4].discountAmount}}</h4>
+                    <p class="text-[#898989] text-[16px] line-through invisible xs2:text-[16px]">Rs. {{products[4].actualAmount}}</p>
+                </div>
+            </div>
+            <div class="overlay flex flex-col justify-center items-center relative bottom-114.5 h-114.5 bg-[#3A3A3A] opacity-80
+            xs2:h-124 xs2:bottom-125"
+                [class.hidden]="!showOverlays[4]"
+                (mouseenter)="showOverlay(4, true)"
+                (mouseleave)="showOverlay(4, false)">
+                <div class="overlay-action-btn mb-4 z-50">
+                    <button (click)="add(products[4])" type="button"
+                        class="text-[#B88E2F] bg-white font-bold py-3 px-8 cursor-pointer">
+                        Add to cart
+                    </button>
+                </div>
+
+                <div class="overlay-action-bar text-center space-x-3 z-50">
+                    <a (click)="show()" class="share text-[16px] text-white inline-flex items-center cursor-pointer">
+                        <fa-icon [icon]="faShare" class="mr-1"></fa-icon> Share
+                    </a>
+                    <a (click)="redirectToComparison()"
+                        class="compare text-[16px] text-white inline-flex items-center cursor-pointer">
+                        <fa-icon [icon]="faCompare" class="mr-1"></fa-icon> Compare
+                    </a>
+                    <a (click)="show()" class="like text-[16px] text-white inline-flex items-center cursor-pointer">
+                        <fa-icon [icon]="faHeart" class="mr-1"></fa-icon> Like
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card-6 w-1/5 h-96 rounded-[10px]
+        xs1:w-[40%]
+        xs2:w-[49%]
+        sm1:w-[46%]
+        sm2:w-[40%]
+        md1:w-[30%]
+        md2:w-[27%]
+        lg1:w-[23%]
+        lg2:w-[21%]">
+            <div class="product-card-image h-[20rem] bg-cover bg-center cursor-pointer"
+                [style.background-image]="'url(' + products[5].imageUrl + ')'"
+                (mouseenter)="showOverlay(5, true)" (mouseleave)="showOverlay(5, false)">
+                <div class="saleOffer relative left-50 top-2 bg-[#2EC1AC] text-white text-center font-poppins rounded-full w-fit py-3 px-2
+                xs1:left-[80%]    
+                xs2:left-[75%]
+                    sm1:left-[80%]
+                    sm2:left-[80%]
+                    md1:left-[78%]
+                    md2:left-[77%]
+                    lg1:left-[76%]
+                    lg2:left-[78%]">
+                    {{products[5].discount}}
+                </div>
+            </div>
+            <div class="product-description bg-[#F4F5F7]
+            xs2:px-2
+            sm1:px-4
+            sm2:px-4
+            md1:px-1
+            md2:px-4
+            lg1:px-2
+            lg2:px-1">
+                <div class="px-2 product-name py-2">
+                    <div class="flex justify-between items-baseline xs2:flex-col">
+                        <h3 class="font-semibold text-[#3A3A3A] text-[24px]">{{products[5].title}}</h3>
+                        <a class="text-[#898989] text-[16px] cursor-pointer" (click)="productDetail()">
+                            {{products[5].detailUrl}}
+                        </a>
+                    </div>
+
+                    <p class="text-[#898989] text-[16px]">{{products[5].subtitle}}</p>
+                </div>
+                <div class="px-2 product-price flex justify-between items-center py-4
+                xs2:flex-col xs2:items-start">
+                    <h4 class="font-semibold text-[#3A3A3A] text-[20px] xs2:text-[16px]">Rs. {{products[5].discountAmount}}</h4>
+                    <p class="text-[#898989] text-[16px] line-through invisible xs2:text-[16px]">Rs. {{products[5].actualAmount}}</p>
+                </div>
+            </div>
+            <div class="overlay flex flex-col justify-center items-center relative bottom-114.5 h-114.5 bg-[#3A3A3A] opacity-80
+            xs2:h-124 xs2:bottom-125"
+                [class.hidden]="!showOverlays[5]"
+                (mouseenter)="showOverlay(5, true)"
+                (mouseleave)="showOverlay(5, false)">
+                <div class="overlay-action-btn mb-4 z-50">
+                    <button (click)="add(products[5])" type="button"
+                        class="text-[#B88E2F] bg-white font-bold py-3 px-8 cursor-pointer">
+                        Add to cart
+                    </button>
+                </div>
+
+
+                <div class="overlay-action-bar text-center space-x-3 z-50">
+                    <a (click)="show()" class="share text-[16px] text-white inline-flex items-center cursor-pointer">
+                        <fa-icon [icon]="faShare" class="mr-1"></fa-icon> Share
+                    </a>
+                    <a (click)="redirectToComparison()"
+                        class="compare text-[16px] text-white inline-flex items-center cursor-pointer">
+                        <fa-icon [icon]="faCompare" class="mr-1"></fa-icon> Compare
+                    </a>
+                    <a (click)="show()" class="like text-[16px] text-white inline-flex items-center cursor-pointer">
+                        <fa-icon [icon]="faHeart" class="mr-1"></fa-icon> Like
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card-7 w-1/5 h-96 rounded-[10px]
+        xs1:w-[40%]
+        xs2:w-[49%]
+        sm1:w-[46%]
+        sm2:w-[40%]
+        md1:w-[30%]
+        md2:w-[27%]
+        lg1:w-[23%]
+        lg2:w-[21%]">
+            <div class="product-card-image h-[20rem] bg-cover bg-center cursor-pointer"
+                [style.background-image]="'url(' + products[6].imageUrl + ')'"
+                (mouseenter)="showOverlay(6, true)" (mouseleave)="showOverlay(6, false)">
+
+                <div class="saleOffer relative left-50 top-2 bg-[#E97171] text-white text-center font-poppins rounded-full w-fit py-3 px-1
+                xs1:left-[80%]    
+                xs2:left-[75%]
+                    sm1:left-[80%]
+                    sm2:left-[80%]
+                    md1:left-[78%]
+                    md2:left-[77%]
+                    lg1:left-[76%]
+                    lg2:left-[78%]">
+                    {{products[6].discount}}
+                </div>
+            </div>
+            <div class="product-description bg-[#F4F5F7]
+            xs2:px-2
+            sm1:px-4
+            sm2:px-4
+            md1:px-1
+            md2:px-4
+            lg1:px-2
+            lg2:px-1">
+                <div class="px-2 product-name py-2">
+                    <div class="flex justify-between items-baseline xs2:flex-col">
+                        <h3 class="font-semibold text-[#3A3A3A] text-[24px]">{{products[6].title}}</h3>
+                        <a class="text-[#898989] text-[16px] cursor-pointer" (click)="productDetail()">
+                            {{products[6].detailUrl}}
+                        </a>
+                    </div>
+
+                    <p class="text-[#898989] text-[16px]">{{products[6].subtitle}}</p>
+                </div>
+                <div class="px-2 product-price flex justify-between items-center py-4
+                xs2:flex-col xs2:items-start">
+                    <h4 class="font-semibold text-[#3A3A3A] text-[20px] xs2:text-[16px]">Rs. {{products[6].discountAmount}}</h4>
+                    <p class="text-[#898989] text-[16px] line-through xs2:text-[16px]">Rs. {{products[6].actualAmount}}</p>
+                </div>
+            </div>
+            <div class="overlay flex flex-col justify-center items-center relative bottom-114.5 h-114.5 bg-[#3A3A3A] opacity-80
+            xs2:h-124 xs2:bottom-125"
+                [class.hidden]="!showOverlays[6]"
+                (mouseenter)="showOverlay(6, true)"
+                (mouseleave)="showOverlay(6, false)">
+                <div class="overlay-action-btn mb-4 z-50">
+                    <button (click)="add(products[6])" type="button"
+                        class="text-[#B88E2F] bg-white font-bold py-3 px-8 cursor-pointer">
+                        Add to cart
+                    </button>
+                </div>
+
+
+                <div class="overlay-action-bar text-center space-x-3 z-50">
+                    <a (click)="show()" class="share text-[16px] text-white inline-flex items-center cursor-pointer">
+                        <fa-icon [icon]="faShare" class="mr-1"></fa-icon> Share
+                    </a>
+                    <a (click)="redirectToComparison()"
+                        class="compare text-[16px] text-white inline-flex items-center cursor-pointer">
+                        <fa-icon [icon]="faCompare" class="mr-1"></fa-icon> Compare
+                    </a>
+                    <a (click)="show()" class="like text-[16px] text-white inline-flex items-center cursor-pointer">
+                        <fa-icon [icon]="faHeart" class="mr-1"></fa-icon> Like
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card-8 w-1/5 h-96 rounded-[10px]
+        xs1:w-[40%]
+        xs2:w-[49%]
+        sm1:w-[46%]
+        sm2:w-[40%]
+        md1:w-[30%]
+        md2:w-[27%]
+        lg1:w-[23%]
+        lg2:w-[21%]">
+            <div class="product-card-image h-[20rem] bg-cover bg-center cursor-pointer"
+                [style.background-image]="'url(' + products[7].imageUrl + ')'" 
+                (mouseenter)="showOverlay(7, true)" (mouseleave)="showOverlay(7, false)">
+                <div class="saleOffer relative left-45 top-2 bg-[#2EC1AC] text-white text-center font-poppins rounded-full w-fit py-3 px-2
+                xs1:left-[80%]    
+                xs2:left-[75%]
+                    sm1:left-[80%]
+                    sm2:left-[80%]
+                    md1:left-[78%]
+                    md2:left-[77%]
+                    lg1:left-[76%]
+                    lg2:left-[78%]">
+                    {{products[7].discount}}
+                </div>
+            </div>
+            <div class="product-description bg-[#F4F5F7]
+            xs2:px-2
+            sm1:px-4
+            sm2:px-4
+            md1:px-1
+            md2:px-4
+            lg1:px-2
+            lg2:px-1">
+                <div class="px-2 product-name py-2">
+                    <div class="flex justify-between items-baseline xs2:flex-col">
+                        <h3 class="font-semibold text-[#3A3A3A] text-[24px]">{{products[7].title}}</h3>
+                        <a class="text-[#898989] text-[16px] cursor-pointer" (click)="productDetail()">
+                            {{products[7].detailUrl}}
+                        </a>
+                    </div>
+
+                    <p class="text-[#898989] text-[16px]">{{products[7].subtitle}}</p>
+                </div>
+                <div class="px-2 product-price flex justify-between items-center py-4
+                xs2:flex-col xs2:items-start">
+                    <h4 class="font-semibold text-[#3A3A3A] text-[20px] xs2:text-[16px]">Rs. {{products[7].discountAmount}}</h4>
+                    <p class="text-[#898989] text-[16px] line-through invisible xs2:text-[16px]">Rs. {{products[7].actualAmount}}</p>
+                </div>
+            </div>
+            <div class="overlay flex flex-col justify-center items-center relative bottom-114.5 h-114.5 bg-[#3A3A3A] opacity-80
+            xs2:h-124 xs2:bottom-125"
+                [class.hidden]="!showOverlays[7]"
+                (mouseenter)="showOverlay(7, true)"
+                (mouseleave)="showOverlay(7, false)">
+                <div class="overlay-action-btn mb-4 z-50">
+                    <button (click)="add(products[7])" type="button"
+                        class="text-[#B88E2F] bg-white font-bold py-3 px-8 cursor-pointer">
+                        Add to cart
+                    </button>
+                </div>
+
+
+                <div class="overlay-action-bar text-center space-x-3 z-50">
+                    <a (click)="show()" class="share text-[16px] text-white inline-flex items-center cursor-pointer">
+                        <fa-icon [icon]="faShare" class="mr-1"></fa-icon> Share
+                    </a>
+                    <a (click)="redirectToComparison()"
+                        class="compare text-[16px] text-white inline-flex items-center cursor-pointer">
+                        <fa-icon [icon]="faCompare" class="mr-1"></fa-icon> Compare
+                    </a>
+                    <a (click)="show()" class="like text-[16px] text-white inline-flex items-center cursor-pointer">
+                        <fa-icon [icon]="faHeart" class="mr-1"></fa-icon> Like
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-button-btn w-fit my-5 mx-auto">
+
+        <button type="button"
+            class="font-bold border-1 border-[#B88E2F] text-[#B88E2F] bg-white px-8 py-2 w-fit cursor-pointer rounded-[7px]"
+            (click)="redirectToShop()">
+            Show more
+        </button>
+    </div>
+
+</div>
+
+<div class="inspirations bg-[#FCF8F3] font-poppins flex mb-14
+xs1:flex-col    
+xs2:flex-col
+    sm1:flex-col
+    sm2:flex-col
+    md1:flex-col">
+
+    <div class="inspiration-heading flex flex-col justify-center items-start gap-8 px-6">
+
+        <h2 class="text-[40px] text-[#3A3A3A] font-semibold leading-[1.2] w-[30rem] px-5 
+        xs1:mt-8 xs1:text-[35px] xs1:w-fit     
+        xs2:mt-5 xs2:text-[35px] xs2:w-fit 
+            sm1:mt-5 sm1:text-[35px] sm1:w-fit 
+            sm2:mt-5 sm2:text-[38px] sm2:w-fit 
+            md1:mt-5 md1:text-[40px] ">
+            50+ Beautiful rooms inspiration
+        </h2>
+
+        <p class="text-[16px] text-[#616161] leading-[1.3] w-[30rem] px-5
+            xs2:w-fit sm1:w-fit">
+            Our designer already made a lot of beautiful prototipe of rooms that inspire you
+        </p>
+
+        <button type="submit"
+            class="bg-[#B88E2F] text-[16px] text-white px-9 py-3 relative left-5 cursor-pointer rounded-[6px]"
+            (click)="redirectToShop()">
+            Explore More
+        </button>
+
+    </div>
+
+    <div class="carousel flex flex-col overflow-x-hidden">
+
+        <div class="carousel-cards flex gap-4 mt-6
+            xs1:flex-col    
+            xs2:flex-col 
+            sm1:flex-col
+            md1:px-4
+            md2:gap-1">
+
+            <div
+                [style.background-image]="'url(' + currentSlide.image + ')'"  
+                class="carousel-card-1 h-[35rem] bg-cover flex items-end pl-8 pr-9 py-8
+                xs1:h-[35rem] xs1:mx-auto xs1:w-fit
+                xs2:h-[30rem] xs2:mx-auto xs2:w-fit
+                sm1:mx-auto">
+                
+                
+                <div class="description bg-white px-4 py-8 space-y-1 opacity-[0.86]">
+                    <p class="text-[#616161] text-[18px] font-bold w-fit">
+                        {{currentSlide.subtitle}}
+                    </p>
+                    <h3 class="text-[28px] text-[#3A3A3A] font-semibold w-fit">{{currentSlide.title}}</h3>
+                </div>
+                <div class="forwardArrow bg-[#B88E2F] px-4 py-2 border-1 border-solid border-[#B88E2F] cursor-pointer"
+                (click)="nextSlideFn()">
+                    <fa-icon [icon]="faArrowRight" class="text-white text-[20px] cursor-pointer" #arrowRight></fa-icon>
+                </div>
+            
+            </div>
+
+            <!-- [style.background-image]="'url(' + nextSlide.image + ')'"  -->
+            <div
+                [style.background-image]="'url(' + nextSlide.image + ')'"  
+                class="carousel-card-2 h-[28rem] bg-cover flex items-end pl-6 pr-7 py-8
+                xs1:h-[35rem] xs1:mx-auto xs1:w-fit xs1:hidden
+                xs2:h-[30rem] xs2:mx-auto xs2:w-fit xs2:hidden
+                sm1:mx-auto sm1:hidden"
+                >
+                <div class="description bg-white px-4 py-6 space-y-1 opacity-[0.86]
+                md1:invisible
+                md2:invisible
+                lg1:invisible
+                lg2:invisible">
+                    <p class="text-[#616161] text-[18px] font-bold">
+                        {{nextSlide.subtitle}} 
+                    </p>
+                    <h3 class="text-[28px] text-[#3A3A3A] font-semibold">
+                        {{nextSlide.title}}
+                    </h3>
+                </div>
+                <div
+                    class="forwardArrow bg-[#B88E2F] px-4 py-2 border-1 border-solid border-[#B88E2F] cursor-pointer
+                    md1:invisible
+                    md2:invisible
+                    lg1:invisible
+                    lg2:invisible"
+                    (click)="nextSlideFn()">
+                    <fa-icon [icon]="faArrowRight" class="text-white text-[20px] cursor-pointer" #arrowRight></fa-icon>
+                </div>
+            </div>
+
+            <div [style.background-image]="'url(' + prevSlide.image + ')'"  
+            class="carousel-card-3 h-[28rem] w-9 bg-cover flex items-end pl-6 pr-7 py-8
+            xs1:h-[30rem] xs1:mx-auto xs1:w-fit xs1:hidden    
+            xs2:h-[30rem] xs2:mx-auto xs2:w-fit xs2:hidden
+                sm1:mx-auto sm1:w-fit sm1:hidden
+                md1:w-35"
+                >
+                <!-- [style.background-image]="'url(' + prevSlide.image + ')'" -->
+                <div class="description bg-white px-4 py-8 space-y-1 opacity-[0.86]
+                    md1:invisible
+                    lg1:invisible
+                    lg2:invisible">
+                    <p class="text-[#616161] text-[18px] font-bold">
+                        {{prevSlide.subtitle}} 
+                    </p> 
+                    <h3 class="text-[28px] text-[#3A3A3A] font-semibold">
+                        {{prevSlide.title}}
+                    </h3>
+                </div>
+                <div
+                    class="forwardArrow bg-[#B88E2F] px-5 py-2 border-1 border-solid border-[#B88E2F] cursor-pointer
+                        md1:invisible
+                        lg1:invisible
+                        lg2:invisible"
+                        (click)="goToSlide(0)">
+                    <fa-icon [icon]="faArrowRight" class="text-white text-[20px] cursor-pointer" #arrowRight></fa-icon>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="carousel-indicators flex justify-end gap-9 relative bottom-20 right-35
+            xs1:bottom-[-28px] xs1:right-75 
+            xs2:bottom-[-38px] xs2:right-30
+            sm1:bottom-[-38px] sm1:right-55
+            md2:bottom-[-38px] md2:right-40
+            lg1:bottom-[-38px] lg1:right-40">
+            <div class="indicator font-semibold"
+                (click)="goToSlide(0)"
+                [class.border-red-500]="activeSlide === 0"
+                [class.border-[#B88E2F]]="activeSlide !== 0">
+                <fa-icon [icon]="faCircle"
+                      [ngClass]="activeSlide === 0 ? 'text-red-500 active px-[4.5px] py-[4px] rounded-full border-1 border-[#B88E2F] ' : 'text-[#D8D8D8]'" class="relative left-[5px] top-[1.5px] cursor-pointer">
+                </fa-icon>
+            </div>
+            <div class="indicator font-semibold"
+                (click)="goToSlide(1)"
+                [class.border-red-500]="activeSlide === 1"
+                [class.border-[#B88E2F]]="activeSlide !== 1">
+                <fa-icon [icon]="faCircle"
+                    [ngClass]="activeSlide === 1 ? 'text-red-500 active px-[4.5px] py-[4px] rounded-full border-1 border-[#B88E2F]' : 'text-[#D8D8D8]'" class="relative left-[5px] top-[1.5px] cursor-pointer">
+                </fa-icon>
+            </div>
+            <div class="indicatorfont-semibold"
+                (click)="goToSlide(2)"
+                [class.border-red-500]="activeSlide === 2"
+                [class.border-[#B88E2F]]="activeSlide !== 2">
+                <fa-icon [icon]="faCircle"
+                    [ngClass]="activeSlide === 2 ? 'text-red-500 active px-[4.5px] py-[4px] rounded-full border-1 border-[#B88E2F] ' : 'text-[#D8D8D8]'" class="relative left-[5px] top-[1.5px] cursor-pointer"></fa-icon>
+            </div>
+        
+        </div>
+
+        <div class="next-btn rounded-full px-3.5 py-3.5 h-[64px] w-[64px] bg-white relative bottom-100 left-160 z-50 cursor-pointer
+         xs1:bottom-82 xs1:left-[80%] 
+         xs2:bottom-82 xs2:left-[80%]
+         sm1:bottom-86 sm1:left-[70%]
+         md2:bottom-86 md2:left-[74%]
+         lg1:bottom-86 lg1:left-[74%]"
+         (click)="nextSlideFn()">
+            <fa-icon [icon]="faChevronRight" class="text-[#B88E2F] text-3xl text-center py-[6px] px-[10px]" #chevronRight></fa-icon>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="funiroFurniture font-poppins mb-14">
+    <p class="text-[18px] text-[#616161] leading-[1.5] font-semibold text-center">Share your setup with</p>
+    <h2 class="text-[#3A3A3A] text-[32px] leading-[1.2] font-semibold text-center">#FuniroFurniture</h2>
+
+    <div class="furniture flex justify-between
+    xs2:flex-col xs2:items-center xs2:gap-2 overflow-x-hidden
+    sm1:flex-col sm1:items-center sm1:gap-2 
+    md1:flex-col md1:items-center md1:gap-2 
+    md2:gap-3">    
+        <div class="furniture-1 flex flex-col gap-4
+            xs2:gap-2
+            md2:gap-2">
+            <div class="flex gap-4 items-end
+                xs2:gap-1
+                md2:gap-1">
+                <div class="h-70 w-20 bg-cover bg-right md1:w-30 md2:w-20" style="background-image: url(assets/imgHome/image12.png);"></div>
+                <div class="h-60 w-110 bg-cover bg-center md1:w-150 md2:w-90" style="background-image: url(assets/imgHome/image19.png);"></div>
+            </div>
+            <div class="flex gap-4 items-start
+                xs2:gap-1
+                md2:gap-1">
+                <div class="h-60 w-40 bg-cover bg-right md1:w-30 md2:w-20" style="background-image: url(assets/imgHome/image14.png);"></div>
+                <div class="h-45 w-90 bg-cover bg-center md1:w-150 md2:w-90" style="background-image: url(assets/imgHome/image21.png);"></div>
+            </div>
+        </div>
+
+        <div class="furniture-2 flex items-center">
+            <div style="background-image: url(assets/imgHome/image17.png);"  class="h-80 w-70 bg-cover bg-center
+             xs2:w-110
+             sm1:w-120
+             md1:w-160
+             md2-w-100" ></div>
+        </div>
+
+        <div class="furniture-3 flex flex-col gap-4">
+            <div class="flex gap-4 items-end">
+                <div class="h-55 w-50 bg-cover bg-center sm1:w-60 md1:w-70 md2:w-40" style="background-image: url(assets/imgHome/image23.png);"></div>
+                <div class="h-70 w-35 bg-cover bg-center sm1:w-60 md1:w-70 md2:w-50" style="background-image: url(assets/imgHome/image24.png);"></div>
+            </div>
+            <div class="flex gap-4 items-start">
+                <div class="h-50 w-40 bg-cover bg-center sm1:w-60 md1:w-70 md2:w-20" style="background-image: url(assets/imgHome/image7.png);"></div>
+                <div class="h-35 w-40 bg-cover bg-center sm1:w-60 md1:w-70 md2:w-50" style="background-image: url(assets/imgHome/image2.png);"></div>
+            </div>
+        </div>
+    </div>
+</div>
